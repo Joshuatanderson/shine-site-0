@@ -5,12 +5,12 @@ import "@fontsource/bebas-neue";
 import type { AppProps } from 'next/app'
 import {Header} from '../components/Header';
 import { ThemeProvider } from '@mui/system';
-import { theme } from '../styles/theme';
+import { lightTheme } from '../styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <Header/>
       <Component {...pageProps} />
     </ThemeProvider>
