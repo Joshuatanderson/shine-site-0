@@ -13,22 +13,22 @@ const base: ThemeOptions = {
     typography: {
         fontFamily: '"Roboto", "Helvetica", sans-serif',
         h1: {
-            fontFamily: "'Bebas Neue', cursive"
+            fontFamily: "'Bebas Neue', sans-serif"
         },
         h2: {
-            fontFamily: "'Bebas Neue', cursive"
+            fontFamily: "'Bebas Neue', sans-serif"
         },
         h3: {
-            fontFamily: "'Bebas Neue', cursive"
+            fontFamily: "'Bebas Neue', sans-serif"
         },
         h4: {
-            fontFamily: "'Bebas Neue', cursive"
+            fontFamily: "'Bebas Neue', sans-serif"
         },
         h5: {
-            fontFamily: "'Bebas Neue', cursive"
+            fontFamily: "'Bebas Neue', sans-serif"
         },
         h6: {
-            fontFamily: "'Bebas Neue', cursive"
+            fontFamily: "'Bebas Neue', sans-serif"
         }
     }
 }
@@ -70,19 +70,23 @@ export const darkTheme = createTheme({
             main: white,
         },
         text: {
-            primary: white
-        }
+            primary: yellow
+        },
+        background:{
+            paper: dark,
+            default: dark,
+       }
     },
-    components: {
-        MuiButton: {
-            styleOverrides: {
-                colorInherit: {
-                    backgroundColor: yellow,
-                    color: dark,
-                  },
-            }
-          },
-      }
+    // components: {
+    //     MuiButton: {
+    //         styleOverrides: {
+    //             colorInherit: {
+    //                 backgroundColor: yellow,
+    //                 color: dark,
+    //               },
+    //         }
+    //       },
+    //   }
 });
 
 export const yellowTheme = createTheme({
