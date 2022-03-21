@@ -29,6 +29,9 @@ const base: ThemeOptions = {
         },
         h6: {
             fontFamily: "'Bebas Neue', sans-serif"
+        },
+        body1: {
+            fontFamily: '"Roboto", "Helvetica", sans-serif'
         }
     }
 }
@@ -44,7 +47,7 @@ export const lightTheme = createTheme({
       main: yellow,
     },
     text: {
-        primary: white
+        primary: dark
     }
   },
   components: {
@@ -94,7 +97,7 @@ export const yellowTheme = createTheme({
     palette: {
         // mode: 'light',
         primary: {
-            main: "#443667",
+            main: yellow,
         },
         secondary: {
             main: white,
