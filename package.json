@@ -1,33 +1,40 @@
 {
-  "name": "shine-site-0",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start && yarn start-sass",
-    "lint": "next lint && yarn start-sass",
-    "start-sass": "sass --watch input.scss output.css"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.8.2",
-    "@emotion/styled": "^11.8.1",
-    "@fontsource/bebas-neue": "^4.5.3",
-    "@fontsource/material-icons": "^4.5.2",
-    "@fontsource/roboto": "^4.5.3",
-    "@mui/icons-material": "^5.5.1",
-    "@mui/material": "^5.5.1",
-    "classnames": "^2.3.1",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.49.9"
-  },
-  "devDependencies": {
-    "@types/node": "17.0.21",
-    "@types/react": "17.0.41",
-    "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0",
-    "typescript": "4.6.2"
-  }
+    "name": "shine-site-0",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start && yarn start-sass",
+        "lint": "next lint && yarn start-sass",
+        "start-sass": "sass --watch input.scss output.css",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.8.2",
+        "@emotion/styled": "^11.8.1",
+        "@fontsource/bebas-neue": "^4.5.3",
+        "@fontsource/material-icons": "^4.5.2",
+        "@fontsource/roboto": "^4.5.3",
+        "@mui/icons-material": "^5.5.1",
+        "@mui/material": "^5.5.1",
+        "classnames": "^2.3.1",
+        "next": "12.1.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "sass": "^1.49.9"
+    },
+    "devDependencies": {
+        "@types/node": "17.0.21",
+        "@types/react": "17.0.41",
+        "eslint": "8.11.0",
+        "eslint-config-next": "12.1.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.7",
+        "prettier": "2.6.0",
+        "typescript": "4.6.2"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
 }
