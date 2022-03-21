@@ -17,14 +17,17 @@ import {
 } from "@mui/material";
 import { darkTheme, lightTheme, yellowTheme } from "../styles/theme";
 import CloudIcon from "@mui/icons-material/Cloud";
-import { CloudCircleOutlined, CloudOutlined } from "@mui/icons-material";
+import {
+    CloudCircleOutlined,
+    CloudOutlined,
+    PersonOutline,
+} from "@mui/icons-material";
 import { jsx } from "@emotion/react";
 
 const Home: NextPage = () => {
     const classes = {
         icon: {
             fontSize: 80,
-            display: "inlineBlock",
         },
     };
 
@@ -37,7 +40,7 @@ const Home: NextPage = () => {
             </Head>
             <ThemeProvider theme={darkTheme}>
                 <ScopedCssBaseline>
-                    <Container sx={{ paddingBottom: "24px" }}>
+                    <Container sx={{ paddingBottom: "48px" }}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <Typography variant="h1" align="center">
@@ -49,9 +52,8 @@ const Home: NextPage = () => {
                                     align="center"
                                     fontStyle="italic"
                                 >
-                                    The cryptocurrency that keeps paying you
-                                    back through tokenized mining that’s
-                                    accessible to anyone
+                                    Earn passive BNB rewards through tokenized
+                                    mining.
                                 </Typography>
                             </Grid>
                             <Grid
@@ -73,15 +75,23 @@ const Home: NextPage = () => {
             </ThemeProvider>
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
-                    <Container>
+                    <Container sx={{ paddingBottom: "48px" }}>
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={6}>
                                 <Typography variant="h1" align="center">
-                                    There's a mining problem
+                                    Solving the mining problem
                                 </Typography>
                             </Grid>
-                            <Grid container item xs={12} sm={6}>
-                                <Grid item>
+                            <Grid container item xs={12} sm={6} spacing={3}>
+                                <Grid item xs justifyContent="center">
+                                    <Typography align="center">
+                                        <PersonOutline
+                                            color="secondary"
+                                            sx={classes.icon}
+                                        />
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12} sm={8}>
                                     <Typography variant="h3">
                                         Solo Mining
                                     </Typography>
@@ -98,35 +108,56 @@ const Home: NextPage = () => {
                                         consuming and costly.
                                     </Typography>
                                 </Grid>
-                                <Grid container item>
-                                    <Typography component="span" variant="h3">
+                                <Grid item xs>
+                                    <Typography align="center">
+                                        <CloudOutlined
+                                            color="secondary"
+                                            sx={classes.icon}
+                                        />
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12} sm={8}>
+                                    <Typography variant="h3">
                                         Cloud mining
                                     </Typography>
-                                    <Grid container item>
-                                        <Grid item>
-                                            <CloudOutlined
-                                                color="secondary"
-                                                sx={classes.icon}
-                                            />
-                                        </Grid>
-                                        <Grid item>
-                                            <Typography variant="body2">
-                                                Cloud mining tries to correct
-                                                this problem but fails by
-                                                canceling out its pros with its
-                                                cons. While it eliminates the
-                                                need for technical skills and
-                                                lowers the barrier to entry it
-                                                requires price minimums and
-                                                contracts that can lock you in
-                                                for 1-2 years. Many also limit
-                                                the crypto you can mine and it
-                                                further centralizes
-                                                cryptocurrency mining.
-                                            </Typography>
-                                        </Grid>
-                                    </Grid>
+                                    <Typography variant="body2">
+                                        Cloud mining tries to correct this
+                                        problem but fails by canceling out its
+                                        pros with its cons. While it eliminates
+                                        the need for technical skills and lowers
+                                        the barrier to entry it requires price
+                                        minimums and contracts that can lock you
+                                        in for 1-2 years. Many also limit the
+                                        crypto you can mine and it further
+                                        centralizes cryptocurrency mining.
+                                    </Typography>
                                 </Grid>
+                            </Grid>
+                        </Grid>
+                    </Container>
+                </ScopedCssBaseline>
+            </ThemeProvider>
+
+            <ThemeProvider theme={yellowTheme}>
+                <ScopedCssBaseline>
+                    <Container sx={{ paddingBottom: "48px" }}>
+                        <Grid container spacing={3}>
+                            <Grid item xs={12} sm={6}>
+                                <Typography variant="h3">
+                                    ShineMine is the better way to mine
+                                </Typography>
+                                <Typography variant="body2">
+                                    ShineMine breaks down all of these barriers
+                                    and allows anyone to get involved with
+                                    crypto mining. ShineMine is a tokenized
+                                    crypto mining operation that allows anyone
+                                    to reap the profits of crypto mining at any
+                                    price point regardless of their knowledge or
+                                    experience with crypto. All someone needs to
+                                    do is hold SHINE tokens to participate. Once
+                                    SHINE tokens are purchased, the benefits of
+                                    crypto mining begin, without the drawbacks.
+                                </Typography>
                             </Grid>
                         </Grid>
                     </Container>

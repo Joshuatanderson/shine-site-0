@@ -13,59 +13,59 @@ const base: ThemeOptions = {
     typography: {
         fontFamily: '"Roboto", "Helvetica", sans-serif',
         h1: {
-            fontFamily: "'Bebas Neue', sans-serif"
+            fontFamily: "'Bebas Neue', sans-serif",
         },
         h2: {
-            fontFamily: "'Bebas Neue', sans-serif"
+            fontFamily: "'Bebas Neue', sans-serif",
         },
         h3: {
-            fontFamily: "'Bebas Neue', sans-serif"
+            fontFamily: "'Bebas Neue', sans-serif",
         },
         h4: {
-            fontFamily: "'Bebas Neue', sans-serif"
+            fontFamily: "'Bebas Neue', sans-serif",
         },
         h5: {
-            fontFamily: "'Bebas Neue', sans-serif"
+            fontFamily: "'Bebas Neue', sans-serif",
         },
         h6: {
-            fontFamily: "'Bebas Neue', sans-serif"
+            fontFamily: "'Bebas Neue', sans-serif",
         },
         body1: {
-            fontFamily: '"Roboto", "Helvetica", sans-serif'
-        }
-    }
-}
+            fontFamily: '"Roboto", "Helvetica", sans-serif',
+        },
+    },
+};
 
 export const lightTheme = createTheme({
     ...base,
-  palette: {
-    // mode: 'light',
-    primary: {
-      main: dark,
+    palette: {
+        // mode: 'light',
+        primary: {
+            main: dark,
+        },
+        secondary: {
+            main: yellow,
+        },
+        text: {
+            primary: dark,
+        },
     },
-    secondary: {
-      main: yellow,
+    components: {
+        MuiAppBar: {
+            styleOverrides: {
+                colorInherit: {
+                    backgroundColor: dark,
+                    color: white,
+                },
+            },
+        },
     },
-    text: {
-        primary: dark
-    }
-  },
-  components: {
-    MuiAppBar: {
-        styleOverrides: {
-            colorInherit: {
-                backgroundColor: dark,
-                color: white,
-              },
-        }
-      },
-  }
 });
 
 export const darkTheme = createTheme({
     ...base,
     palette: {
-        mode: 'dark',
+        mode: "dark",
         primary: {
             main: yellow,
         },
@@ -73,12 +73,12 @@ export const darkTheme = createTheme({
             main: white,
         },
         text: {
-            primary: yellow
+            primary: yellow,
         },
-        background:{
+        background: {
             paper: dark,
             default: dark,
-       }
+        },
     },
     // components: {
     //     MuiButton: {
@@ -103,11 +103,12 @@ export const yellowTheme = createTheme({
             main: white,
         },
         text: {
-            primary: white
+            primary: dark,
+            secondary: white,
         },
-        background:{
-             paper: yellow,
-             default: yellow,
-        }
+        background: {
+            paper: yellow,
+            default: yellow,
+        },
     },
 });
