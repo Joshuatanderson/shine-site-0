@@ -38,6 +38,12 @@ const team = [
     { name: "Stephen Sommers", file: stephen, description: "Business Advisor" },
 ];
 
+const classes = {
+    imageCont: {
+        margin: "2px",
+    },
+};
+
 const Team = () => {
     return (
         <>
@@ -57,13 +63,20 @@ const Team = () => {
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
                     <Container sx={{ paddingBottom: "48px" }}>
-                        <Grid container spacing={3}>
+                        <Grid
+                            item
+                            xs={12}
+                            container
+                            spacing={3}
+                            justifyContent="center"
+                        >
                             {team.map((member, index) => (
                                 <Grid
+                                    sx={classes.imageCont}
                                     key={`team_img_${index}`}
                                     item
-                                    xs={6}
-                                    sm={4}
+                                    xs={5}
+                                    sm={3}
                                 >
                                     <Image src={member.file} />
                                     <Typography variant="h5" align="center">
