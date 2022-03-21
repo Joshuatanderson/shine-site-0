@@ -42,6 +42,9 @@ const classes = {
     imageCont: {
         margin: "2px",
     },
+    description: {
+        fontStyle: "italic",
+    },
 };
 
 const Team = () => {
@@ -82,7 +85,11 @@ const Team = () => {
                                     <Typography variant="h5" align="center">
                                         {member.name}
                                     </Typography>
-                                    <Typography variant="body1" align="center">
+                                    <Typography
+                                        variant="body1"
+                                        align="center"
+                                        sx={classes.description}
+                                    >
                                         {member.description}
                                     </Typography>
                                 </Grid>
