@@ -18,6 +18,7 @@ import conner from "../public/team/conner.jpg";
 import matthew from "../public/team/matthew.jpg";
 import stephen from "../public/team/stephen.jpg";
 import tahe from "../public/team/tahe.jpg";
+import TitleBar from "../components/TitleBar";
 
 const team = [
     { name: "Noah Newman", file: noah, description: "Cofounder, Project Lead" },
@@ -52,15 +53,7 @@ const Team = () => {
         <>
             <ThemeProvider theme={darkTheme}>
                 <ScopedCssBaseline>
-                    <Container sx={{ paddingBottom: "48px" }}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12}>
-                                <Typography variant="h1" align="center">
-                                    Meet the Team
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </Container>
+                    <TitleBar title="meet the team" />
                 </ScopedCssBaseline>
             </ThemeProvider>
             <ThemeProvider theme={lightTheme}>

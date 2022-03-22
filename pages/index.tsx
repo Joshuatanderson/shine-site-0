@@ -24,6 +24,7 @@ import {
     SolarPowerOutlined,
 } from "@mui/icons-material";
 import ReactPlayer from "react-player";
+import TitleBar from "../components/TitleBar";
 
 // import explainerVid from "../public/explainer.mov";
 
@@ -46,37 +47,32 @@ const Home: NextPage = () => {
             </Head>
             <ThemeProvider theme={darkTheme}>
                 <ScopedCssBaseline>
-                    <Container sx={{ paddingBottom: "48px" }}>
-                        <Grid container spacing={3}>
-                            <Grid item xs={12}>
-                                <Typography variant="h1" align="center">
-                                    A new way to mine
-                                </Typography>
-                                <Typography
-                                    color="secondary"
-                                    variant="body1"
-                                    align="center"
-                                    fontStyle="italic"
-                                >
-                                    Earn passive BNB rewards through tokenized
-                                    mining.
-                                </Typography>
-                            </Grid>
-                            <Grid
-                                item
-                                xs={12}
-                                container
-                                justifyContent="space-around"
+                    <TitleBar title="a new way to mine">
+                        <Grid item xs={12}>
+                            <Typography
+                                color="secondary"
+                                variant="body1"
+                                align="center"
+                                fontStyle="italic"
                             >
-                                <Button variant="contained" color="primary">
-                                    Buy Shine
-                                </Button>
-                                <Button variant="contained" color="primary">
-                                    View Whitepaper
-                                </Button>
-                            </Grid>
+                                Earn passive BNB rewards through tokenized
+                                mining.
+                            </Typography>
                         </Grid>
-                    </Container>
+                        <Grid
+                            item
+                            xs={12}
+                            container
+                            justifyContent="space-around"
+                        >
+                            <Button variant="contained" color="primary">
+                                Buy Shine
+                            </Button>
+                            <Button variant="contained" color="primary">
+                                View Whitepaper
+                            </Button>
+                        </Grid>
+                    </TitleBar>
                 </ScopedCssBaseline>
             </ThemeProvider>
             <ThemeProvider theme={lightTheme}>
