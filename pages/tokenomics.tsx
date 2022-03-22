@@ -1,6 +1,12 @@
 import { ThemeProvider } from "@emotion/react";
 import { Container, Grid, ScopedCssBaseline, Typography } from "@mui/material";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import {
+    Chart as ChartJS,
+    ArcElement,
+    Tooltip,
+    Legend,
+    ChartOptions,
+} from "chart.js";
 import { Pie } from "react-chartjs-2";
 import React, { useEffect, useRef, useState } from "react";
 import TitleBar from "../components/TitleBar";
@@ -17,6 +23,10 @@ const classes = {
     paragraph: {
         marginBottom: 2,
     },
+    section: {
+        // marginBottom: 5,
+        paddingTop: 10,
+    },
 };
 
 const allocationChartData = {
@@ -32,7 +42,20 @@ const allocationChartData = {
     ],
 };
 
-const chartOptions = {
+const feeBreakdownChartData = {
+    labels: ["Redistribution", "Charity", "Liquidity", "Marketing"],
+    datasets: [
+        {
+            label: "Token Distribution",
+            data: [1, 1, 1, 1],
+            backgroundColor: [yellow, seafoam, coral, dark],
+            borderColor: [yellow, seafoam, coral, dark],
+            borderWidth: 1,
+        },
+    ],
+};
+
+const chartOptions: ChartOptions = {
     plugins: {
         legend: {
             labels: {
@@ -89,9 +112,15 @@ const Tokenomics = () => {
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
                     <Container sx={{ paddingBottom: "48px" }}>
-                        <Grid item xs={12} container spacing={3}>
+                        <Grid
+                            item
+                            xs={12}
+                            container
+                            spacing={3}
+                            sx={classes.section}
+                        >
                             <Grid item xs={12} sm={6}>
-                                <Typography variant="h5">
+                                <Typography variant="h4">
                                     Token Allocation
                                 </Typography>
                                 <Typography
@@ -129,6 +158,32 @@ const Tokenomics = () => {
                                     data={allocationChartData}
                                     options={chartOptions}
                                 ></Pie>
+                            </Grid>
+                        </Grid>
+                        <Grid
+                            container
+                            item
+                            xs={12}
+                            spacing={3}
+                            sx={classes.section}
+                        >
+                            <Grid item xs={12} sm={6}>
+                                <Typography variant="h4">
+                                    8% Fee Breakdown
+                                </Typography>
+                                <Typography variant="body1">
+                                    Every ShineMine transaction has a 8%
+                                    transaction fee. This supports ShineMine's
+                                    vision of carbon neutrality and sustained
+                                    growth, as well as rewarding SHINE token
+                                    holders.
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Pie
+                                    data={feeBreakdownChartData}
+                                    options={chartOptions}
+                                />
                             </Grid>
                         </Grid>
                     </Container>
