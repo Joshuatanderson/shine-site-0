@@ -79,9 +79,9 @@ const slidingItems: Record<number, SlidingItem> = {
         name: "Can I see technical details?",
         description: (
             <Typography variant="body1">
-                Check out our <Link href="">whitepaper</Link>. If you\'re
-                looking for addresses, check out our{" "}
-                <Link href="">transparency</Link> page.
+                Check out our <Link href="/whitepaper">whitepaper</Link>. If
+                you\'re looking for addresses, check out our{" "}
+                <Link href="/transparency">transparency</Link> page.
             </Typography>
         ),
         id: 3,
