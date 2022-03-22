@@ -150,9 +150,9 @@ const Home: NextPage = () => {
                                         component="u"
                                         sx={classes.whiteUnderline}
                                     >
-                                        ShineMine
-                                    </Box>{" "}
-                                    is the better way to mine
+                                        ShineMine is{" "}
+                                    </Box>
+                                    the better way to mine
                                 </Typography>
                                 <Typography variant="body2">
                                     ShineMine breaks down barriers and allows
