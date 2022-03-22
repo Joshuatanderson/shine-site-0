@@ -31,7 +31,7 @@ const base: ThemeOptions = {
             fontFamily: "'Bebas Neue', sans-serif",
         },
         body1: {
-            fontFamily: '"Roboto", "Helvetica", sans-serif',
+            fontFamily: '"Roboto Condensed", "Helvetica", sans-serif',
         },
     },
 };
