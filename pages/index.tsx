@@ -25,11 +25,13 @@ import {
 } from "@mui/icons-material";
 import ReactPlayer from "react-player";
 import TitleBar from "../components/TitleBar";
+import Image from "next/image";
+
 import Amb from "../public/featured/amb.png";
 import Benzinga from "../public/featured/Benzinga.png";
 import CryptoDaily from "../public/featured/cryptodaily.png";
 import Yahoo from "../public/featured/Yahoo.png";
-import Image from "next/image";
+import NewsBtc from "../public/featured/newsBtc.png";
 
 // import explainerVid from "../public/explainer.mov";
 
@@ -46,10 +48,17 @@ const classes = {
     },
 };
 
-const images = [Yahoo, Amb, Benzinga, CryptoDaily];
+const images = [Yahoo, Amb, Benzinga, CryptoDaily, NewsBtc];
 
 const makeImages = images.map((img, index) => (
-    <Grid key={`featured_${index}`} item xs={5} sm={3}>
+    <Grid
+        key={`featured_${index}`}
+        container
+        item
+        xs={5}
+        sm={3}
+        alignContent="center"
+    >
         <Box
             component={Image}
             src={img}
@@ -370,7 +379,12 @@ const Home: NextPage = () => {
                                     Featured in
                                 </Typography>
                             </Grid>
-                            <Grid container item xs={12}>
+                            <Grid
+                                container
+                                item
+                                xs={12}
+                                justifyContent="space-around"
+                            >
                                 {makeImages}
                             </Grid>
                         </Grid>
