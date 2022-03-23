@@ -25,19 +25,48 @@ import {
 } from "@mui/icons-material";
 import ReactPlayer from "react-player";
 import TitleBar from "../components/TitleBar";
+import Amb from "../public/featured/amb.png";
+import Benzinga from "../public/featured/Benzinga.png";
+import CryptoDaily from "../public/featured/cryptodaily.png";
+import Yahoo from "../public/featured/Yahoo.png";
+import Image from "next/image";
 
 // import explainerVid from "../public/explainer.mov";
 
-const Home: NextPage = () => {
-    const classes = {
-        icon: {
-            fontSize: 80,
-        },
-        whiteUnderline: {
-            textDecorationColor: lightTheme.palette.common.white,
-        },
-    };
+const classes = {
+    icon: {
+        fontSize: 80,
+    },
+    whiteUnderline: {
+        textDecorationColor: lightTheme.palette.common.white,
+    },
+    section: {
+        paddingTop: "48px",
+        paddingBottom: "48px",
+    },
+};
 
+const images = [Yahoo, Amb, Benzinga, CryptoDaily];
+
+const makeImages = images.map((img, index) => (
+    <Grid key={`featured_${index}`} item xs={5} sm={3}>
+        <Box
+            component={Image}
+            src={img}
+            sx={{
+                filter: "grayscale(100%)",
+                "-webkit-filter": "grayscale(100%)",
+                transition: "all .3s",
+                "&:hover": {
+                    filter: "grayscale(0%)",
+                    "-webkit-filter": "grayscale(0%)",
+                },
+            }}
+        />
+    </Grid>
+));
+
+const Home: NextPage = () => {
     return (
         <>
             <Head>
@@ -97,6 +126,7 @@ const Home: NextPage = () => {
                                     <Typography variant="h3">
                                         Solo Mining
                                     </Typography>
+                                    x
                                     <Typography variant="body2">
                                         Cryptocurrency mining was once dominated
                                         by individuals and their home computers.
@@ -142,7 +172,7 @@ const Home: NextPage = () => {
 
             <ThemeProvider theme={yellowTheme}>
                 <ScopedCssBaseline>
-                    <Container sx={{ paddingBottom: "48px" }}>
+                    <Container sx={classes.section}>
                         <Grid container spacing={3}>
                             <Grid item xs={12} sm={6}>
                                 <Typography variant="h3">
@@ -184,7 +214,11 @@ const Home: NextPage = () => {
                             sx={{ marginTop: "48px", marginBottom: "48px" }}
                         >
                             <Grid container spacing={3}>
-                                <Grid item container justifyContent="center">
+                                <Grid
+                                    item
+                                    container
+                                    justifyContent="space-around"
+                                >
                                     <Button
                                         variant="contained"
                                         color="secondary"
@@ -285,6 +319,63 @@ const Home: NextPage = () => {
                         </Container>
                     </ScopedCssBaseline>
                 </ThemeProvider>
+            </ThemeProvider>
+            <ThemeProvider theme={lightTheme}>
+                <ScopedCssBaseline>
+                    <Container sx={classes.section}>
+                        <Grid container item xs={12}>
+                            <Grid item xs={12}>
+                                <Typography variant="h4" color="secondary">
+                                    You win no matter what with ShineMine
+                                </Typography>
+                                <Typography variant="body1">
+                                    The more people that hold SHINE tokens will
+                                    increase the value of your SHINE. The less
+                                    people that hold SHINE increases the amount
+                                    of rewards you can claim.
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                        <Grid xs={12}>
+                            <Typography variant="h2">Roadmap</Typography>
+                        </Grid>
+                    </Container>
+                </ScopedCssBaseline>
+            </ThemeProvider>
+            <ThemeProvider theme={darkTheme}>
+                <ScopedCssBaseline>
+                    <Container sx={classes.section}>
+                        <Grid container item xs={12} spacing={3}>
+                            <Grid
+                                container
+                                item
+                                xs={12}
+                                justifyContent="space-around"
+                            >
+                                <Button variant="contained">Buy Shine</Button>
+                                <Button variant="contained">
+                                    View Whitepaper
+                                </Button>
+                            </Grid>
+                        </Grid>
+                    </Container>
+                </ScopedCssBaseline>
+            </ThemeProvider>
+            <ThemeProvider theme={lightTheme}>
+                <ScopedCssBaseline>
+                    <Container sx={classes.section}>
+                        <Grid container item xs={12} spacing={3}>
+                            <Grid item xs={12}>
+                                <Typography variant="h3">
+                                    Featured in
+                                </Typography>
+                            </Grid>
+                            <Grid container item xs={12}>
+                                {makeImages}
+                            </Grid>
+                        </Grid>
+                    </Container>
+                </ScopedCssBaseline>
             </ThemeProvider>
         </>
     );
