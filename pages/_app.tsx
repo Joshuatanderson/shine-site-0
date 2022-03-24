@@ -4,18 +4,27 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 import type { AppProps } from "next/app";
 import { Header } from "../components/Header";
-import { ThemeProvider } from "@mui/system";
+import { Box, ThemeProvider } from "@mui/system";
 import { lightTheme } from "../styles/theme";
-import { ScopedCssBaseline } from "@mui/material";
+import Footer from "../components/Footer";
+
+const classes = {
+    app: {
+        minHeight: "calc(100vh - 104px)",
+    },
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <CssBaseline>
                 <ThemeProvider theme={lightTheme}>
-                    <Header />
+                    <Box component="div" sx={classes.app}>
+                        <Header />
 
-                    <Component {...pageProps} />
+                        <Component {...pageProps} />
+                    </Box>
+                    <Footer />
                 </ThemeProvider>
             </CssBaseline>
         </>

@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 import {
+    Box,
     Button,
     Container,
     Grid,
@@ -13,8 +14,13 @@ import TitleBar from "../components/TitleBar";
 import Link from "../components/Link";
 import { darkTheme, lightTheme } from "../styles/theme";
 import shineCoin from "../public/coin.png";
+import Footer from "../components/Footer";
 
-const classes = {};
+const classes = {
+    imageCont: {
+        maxWidth: 100,
+    },
+};
 
 const slidingItems = {
     0: {
@@ -79,9 +85,14 @@ const Whitepaper = () => {
                                 sm={4}
                                 justifyContent="center"
                             >
-                                <div>
-                                    <Image src={shineCoin} alt=""></Image>
-                                </div>
+                                <Box sx={classes.imageCont}>
+                                    <Image
+                                        src={shineCoin}
+                                        alt=""
+                                        width={"100vw"}
+                                        height={"100vw"}
+                                    ></Image>
+                                </Box>
                             </Grid>
                             <Grid
                                 xs={12}

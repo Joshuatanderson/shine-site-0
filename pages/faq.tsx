@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@emotion/react";
 import {
+    Box,
     Container,
     Grid,
     List,
@@ -34,6 +35,9 @@ const classes = {
     activeSlidingItem: {
         color: "#fff",
         transition: "all .3s",
+    },
+    imageCont: {
+        width: 100,
     },
 };
 
@@ -285,12 +289,14 @@ const Faq = () => {
                                 sm={4}
                                 justifyContent="center"
                             >
-                                <div>
+                                <Box sx={classes.imageCont}>
                                     <Image
                                         alt="Shine coin"
                                         src={shineCoin}
+                                        width={"100vw"}
+                                        height={"100vw"}
                                     ></Image>
-                                </div>
+                                </Box>
                             </Grid>
                         </Grid>
                     </Container>

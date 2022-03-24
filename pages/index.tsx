@@ -33,8 +33,6 @@ import CryptoDaily from "../public/featured/cryptodaily.png";
 import Yahoo from "../public/featured/Yahoo.png";
 import NewsBtc from "../public/featured/newsBtc.png";
 
-// import explainerVid from "../public/explainer.mov";
-
 const classes = {
     icon: {
         fontSize: 80,
@@ -135,7 +133,6 @@ const Home: NextPage = () => {
                                     <Typography variant="h3">
                                         Solo Mining
                                     </Typography>
-                                    x
                                     <Typography variant="body2">
                                         Cryptocurrency mining was once dominated
                                         by individuals and their home computers.
