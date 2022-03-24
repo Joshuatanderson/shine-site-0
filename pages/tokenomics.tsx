@@ -173,10 +173,10 @@ const Tokenomics = () => {
                                 </Typography>
                                 <Typography variant="body1">
                                     Every ShineMine transaction has a 8%
-                                    transaction fee. This supports ShineMine's
-                                    vision of carbon neutrality and sustained
-                                    growth, as well as rewarding SHINE token
-                                    holders.
+                                    transaction fee. This supports
+                                    ShineMine&apos;s vision of carbon neutrality
+                                    and sustained growth, as well as rewarding
+                                    SHINE token holders.
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>

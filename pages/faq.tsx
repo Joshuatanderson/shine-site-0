@@ -7,7 +7,7 @@ import {
     ScopedCssBaseline,
     Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { SyntheticEvent, useEffect, useState } from "react";
 
 import TitleBar from "../components/TitleBar";
 import { darkTheme, lightTheme } from "../styles/theme";
@@ -47,7 +47,7 @@ const slidingItems: Record<number, SlidingItem> = {
         description: (
             <Typography variant="body1">
                 <Link href="https://www.shinemine.io/buy-shine">Go here. </Link>
-                We\'re live on PancakeSwap with a BNB/SHINE pairing.
+                We&apos;re live on PancakeSwap with a BNB/SHINE pairing.
             </Typography>
         ),
         id: 0,
@@ -80,7 +80,7 @@ const slidingItems: Record<number, SlidingItem> = {
         description: (
             <Typography variant="body1">
                 Check out our <Link href="/whitepaper">whitepaper</Link>. If
-                you\'re looking for addresses, check out our{" "}
+                you&apos;re looking for addresses, check out our{" "}
                 <Link href="/transparency">transparency</Link> page.
             </Typography>
         ),
@@ -95,7 +95,7 @@ const slidingItems: Record<number, SlidingItem> = {
                 hardware, MaaS allows you to purchase a service token that
                 secures your share of a diversified, ever-expanding and
                 continually optimized mining operation. Mining-as-a-Service
-                differs from cloud mining in two crucial ways – it can
+                differs from cloud mining in two crucial ways - it can
                 compensate for the increase in mining difficulty through
                 reinvestment strategies and it is optimized for profitability
                 using scripting and advanced mining strategies. You receive
@@ -111,13 +111,14 @@ const slidingItems: Record<number, SlidingItem> = {
         description: (
             <Typography variant="body1">
                 SHINE tokens are hardware-backed utility tokens, which can be
-                used to access ShineMine’s cryptocurrency mining services and
-                the reward pool associated with the growing endeavor. Once
+                used to access ShineMine&apos;s cryptocurrency mining services
+                and the reward pool associated with the growing endeavor. Once
                 acquired, the tokens can appreciate in value as they distribute
                 weekly mining rewards. Additional utility for SHINE tokens will
-                be unlocked throughout our roadmap, through NFT’s, ShineDAO, and
-                any other future aspects of the ShineMine project. SHINE tokens
-                are issued on the Binance platform, as BEP-20 tokens.
+                be unlocked throughout our roadmap, through NFT&apos;s,
+                ShineDAO, and any other future aspects of the ShineMine project.
+                SHINE tokens are issued on the Binance platform, as BEP-20
+                tokens.
             </Typography>
         ),
         id: 5,
@@ -127,9 +128,9 @@ const slidingItems: Record<number, SlidingItem> = {
         description: (
             <>
                 <Typography variant="body1">
-                    "Any Binance Smart Chain wallet that is BEP-20 compatible
-                    can be used for storing and transferring SHINE tokens. The
-                    following are common options:"
+                    Any Binance Smart Chain wallet that is BEP-20 compatible can
+                    be used for storing and transferring SHINE tokens. The
+                    following are common options:
                 </Typography>
                 <List>
                     <ListItem>Trust Wallet</ListItem>
@@ -170,8 +171,8 @@ const slidingItems: Record<number, SlidingItem> = {
                 </List>
                 <Typography variant="body1">
                     In short, the operation is optimized by algorithms that
-                    'hunt' for the most profitable mining activities and switch
-                    to them hourly.
+                    &apos;hunt&apos; for the most profitable mining activities
+                    and switch to them hourly.
                 </Typography>
             </>
         ),
@@ -204,7 +205,9 @@ const makeSelector = (
             <Typography
                 variant="h5"
                 sx={classes.slidingItem}
-                onClick={(e) => clickHandler(e.target.id)}
+                onClick={(e: SyntheticEvent) =>
+                    clickHandler(parseInt((e.target as HTMLElement).id))
+                }
                 id={`${item.id}`}
             >
                 {item.name}
@@ -277,7 +280,10 @@ const Faq = () => {
                                 justifyContent="center"
                             >
                                 <div>
-                                    <Image src={shineCoin}></Image>
+                                    <Image
+                                        alt="Shine coin"
+                                        src={shineCoin}
+                                    ></Image>
                                 </div>
                             </Grid>
                         </Grid>

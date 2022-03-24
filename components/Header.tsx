@@ -54,7 +54,12 @@ export const Header = () => {
                         ShineMine
                     </Typography> */}
                     <Box component="a" sx={{ height: 32, maxHeight: 32 }}>
-                        <Image height={31.37} width={32} src={logoSmall} />
+                        <Image
+                            height={31.37}
+                            width={32}
+                            src={logoSmall}
+                            alt="shine logo"
+                        />
                     </Box>
                     {/* <Typography
                         variant="h6"

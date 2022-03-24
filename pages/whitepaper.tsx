@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+
 import TitleBar from "../components/TitleBar";
 import { darkTheme, lightTheme } from "../styles/theme";
 import shineCoin from "../public/coin.png";
@@ -78,10 +79,21 @@ const Whitepaper = () => {
                                 justifyContent="center"
                             >
                                 <div>
-                                    <Image src={shineCoin}></Image>
+                                    <Image src={shineCoin} alt=""></Image>
                                 </div>
                             </Grid>
-                            <Grid xs={12}></Grid>
+                            <Grid
+                                xs={12}
+                                item
+                                container
+                                justifyContent="center"
+                            >
+                                <Button variant="contained" color="secondary">
+                                    <a download={"../public/whitepaper.pdf"}>
+                                        Download Whitepaper
+                                    </a>
+                                </Button>
+                            </Grid>
                         </Grid>
                     </Container>
                 </ScopedCssBaseline>

@@ -114,7 +114,10 @@ const Team = () => {
                                     xs={5}
                                     sm={3}
                                 >
-                                    <Image src={member.file} />
+                                    <Image
+                                        src={member.file}
+                                        alt={member.name}
+                                    />
                                     <Typography variant="h5" align="center">
                                         {member.name}
                                     </Typography>
