@@ -10,6 +10,7 @@ import Image from "next/image";
 import React from "react";
 
 import TitleBar from "../components/TitleBar";
+import Link from "../components/Link";
 import { darkTheme, lightTheme } from "../styles/theme";
 import shineCoin from "../public/coin.png";
 
@@ -88,10 +89,13 @@ const Whitepaper = () => {
                                 container
                                 justifyContent="center"
                             >
-                                <Button variant="contained" color="secondary">
-                                    <a download={"../public/whitepaper.pdf"}>
-                                        Download Whitepaper
-                                    </a>
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white paper 2.2.0.pdf"
+                                    target="_blank"
+                                >
+                                    View Whitepaper
                                 </Button>
                             </Grid>
                         </Grid>
