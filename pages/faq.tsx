@@ -31,6 +31,10 @@ const classes = {
             color: darkTheme.palette.common.white,
         },
     },
+    activeSlidingItem: {
+        color: "#fff",
+        transition: "all .3s",
+    },
 };
 
 interface SlidingItem {
@@ -196,33 +200,35 @@ const slidingItems: Record<number, SlidingItem> = {
     },
 };
 
-const makeSelector = (
-    data: Record<number, SlidingItem>,
-    clickHandler: (id: number) => void
-) =>
-    Object.values(data).map((item) => (
-        <Grid item xs={12} key={`answer-${item.id}`}>
-            <Typography
-                variant="h5"
-                sx={classes.slidingItem}
-                onClick={(e: SyntheticEvent) =>
-                    clickHandler(parseInt((e.target as HTMLElement).id))
-                }
-                id={`${item.id}`}
-            >
-                {item.name}
-            </Typography>
-        </Grid>
-    ));
-
 const Faq = () => {
-    const [activeItem, setActiveItem] = useState<JSX.Element>(
-        slidingItems[0].description
-    );
+    const [activeItem, setActiveItem] = useState<SlidingItem>(slidingItems[0]);
 
     const handleClick = (id: number) => {
-        setActiveItem(slidingItems[id].description);
+        setActiveItem(slidingItems[id]);
     };
+
+    const makeSelector = (
+        data: Record<number, SlidingItem>,
+        clickHandler: (id: number) => void
+    ) =>
+        Object.values(data).map((item) => (
+            <Grid item xs={12} key={`answer-${item.id}`}>
+                <Typography
+                    variant="h5"
+                    sx={
+                        activeItem.id === item.id
+                            ? classes.activeSlidingItem
+                            : classes.slidingItem
+                    }
+                    onClick={(e: SyntheticEvent) =>
+                        clickHandler(parseInt((e.target as HTMLElement).id))
+                    }
+                    id={`${item.id}`}
+                >
+                    {item.name}
+                </Typography>
+            </Grid>
+        ));
 
     return (
         <>
@@ -306,7 +312,7 @@ const Faq = () => {
                                 color={darkTheme.palette.common.white}
                             >
                                 <Typography variant="body1" align="center">
-                                    {activeItem}
+                                    {activeItem.description}
                                 </Typography>
                             </Grid>
                         </Grid>
