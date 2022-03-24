@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && next export",
         "start": "next start && yarn start-sass",
         "lint": "next lint && yarn start-sass",
         "start-sass": "sass --watch input.scss output.css",
