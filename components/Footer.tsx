@@ -25,8 +25,8 @@ const classes = {
         // marginTop: "18px",
     },
     footerCont: {
-        position: "absolute",
-        bottom: 0,
+        // position: "absolute",
+        // bottom: 0,
         width: "100%",
     },
 };
