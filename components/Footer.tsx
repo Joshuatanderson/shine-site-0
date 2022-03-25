@@ -22,11 +22,8 @@ const classes = {
 
         backgroundColor: darkTheme.palette.background.default, // needs manual spec due to abs position
         padding: darkTheme.spacing(3),
-        // marginTop: "18px",
     },
     footerCont: {
-        // position: "absolute",
-        // bottom: 0,
         width: "100%",
     },
 };
@@ -83,7 +80,6 @@ const Footer = () => {
                                 </SvgIcon>
                             </Grid>
                         </Grid>
-                        {/* </Container> */}
                     </Box>
                 </ScopedCssBaseline>
             </ThemeProvider>
