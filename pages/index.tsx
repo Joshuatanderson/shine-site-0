@@ -314,8 +314,9 @@ const Home: NextPage = () => {
                                                 variant="body2"
                                                 color="secondary"
                                             >
-                                                Accessible, democratized crypto
-                                                mining.
+                                                start mining crypto with any
+                                                investment and no long term
+                                                contract.
                                             </Typography>
                                         </Grid>
                                     </Grid>
