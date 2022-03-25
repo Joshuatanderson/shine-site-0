@@ -6,10 +6,25 @@ import {
     ScopedCssBaseline,
     Typography,
 } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
+import ReactPlayer from "react-player";
 import Link from "../components/Link";
 import TitleBar from "../components/TitleBar";
 import { darkTheme, lightTheme } from "../styles/theme";
+
+const classes = {
+    playerWrapper: {
+        position: "relative",
+    },
+    reactPlayer: {
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        width: "100%",
+        height: "100%",
+    },
+};
 
 const Buy = () => {
     return (
@@ -53,6 +68,17 @@ const Buy = () => {
                                         pairing.
                                     </Typography>
                                 </Grid>
+                            </Grid>
+                            <Grid item xs={12} sm={12}>
+                                <Box sx={classes.playerWrapper}>
+                                    <ReactPlayer
+                                        sx={classes.reactPlayer}
+                                        width="100%"
+                                        height="70vw"
+                                        light="true"
+                                        url="https://www.youtube.com/watch?v=AQKU73zp43c&t=1s"
+                                    />
+                                </Box>
                             </Grid>
                         </Grid>
                     </Container>
