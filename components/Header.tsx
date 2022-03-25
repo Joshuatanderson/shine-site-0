@@ -73,6 +73,11 @@ export const Header = () => {
         setAnchorElNav(null);
     };
 
+    const handleClick = (e: React.MouseEvent<HTMLElement>, path: string) => {
+        e.preventDefault();
+        router.push(path);
+    };
+
     return (
         <ThemeProvider theme={darkTheme}>
             <ScopedCssBaseline>
@@ -178,28 +183,31 @@ export const Header = () => {
                                     onClose={handleCloseNavMenu}
                                     sx={{
                                         display: { xs: "block", md: "none" },
+                                        textDecoration: "none",
                                     }}
                                 >
                                     {pages.map((page) => (
-                                        <MenuItem
-                                            key={page.path}
+                                        <Link
+                                            href={`/${page.path}`}
                                             onClick={handleCloseNavMenu}
+                                            key={page.path}
+                                            sx={{ textDecoration: "none" }}
                                         >
-                                            <Typography textAlign="center">
-                                                <Link
-                                                    href={`/${page.path}`}
-                                                    sx={
-                                                        classes.menuButtonTextItems
-                                                    }
-                                                    color={
-                                                        darkTheme.palette
-                                                            .secondary.main
-                                                    }
+                                            <MenuItem
+                                                key={page.path}
+                                                onClick={handleCloseNavMenu}
+                                            >
+                                                <Typography
+                                                    sx={{
+                                                        my: 2,
+                                                        color: "white",
+                                                        display: "block",
+                                                    }}
                                                 >
                                                     {page.display.toUpperCase()}
-                                                </Link>
-                                            </Typography>
-                                        </MenuItem>
+                                                </Typography>
+                                            </MenuItem>
+                                        </Link>
                                     ))}
                                 </Menu>
                             </Box>
