@@ -55,6 +55,10 @@ const classes = {
         width: "100%",
         height: "100%",
     },
+    strikeThrough: {
+        textDecoration: "line-through",
+        textDecorationColor: coral,
+    },
 };
 
 const images = [Yahoo, Amb, Benzinga, CryptoDaily, NewsBtc];
@@ -145,7 +149,10 @@ const Home: NextPage = () => {
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
-                                    <Typography variant="h3">
+                                    <Typography
+                                        variant="h3"
+                                        sx={classes.strikeThrough}
+                                    >
                                         Solo Mining
                                     </Typography>
                                     <Typography variant="body2">
@@ -170,7 +177,10 @@ const Home: NextPage = () => {
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={12} sm={8}>
-                                    <Typography variant="h3">
+                                    <Typography
+                                        variant="h3"
+                                        sx={classes.strikeThrough}
+                                    >
                                         Cloud mining
                                     </Typography>
                                     <Typography variant="body2">
@@ -237,7 +247,6 @@ const Home: NextPage = () => {
                                         sx={classes.reactPlayer}
                                         width="100%"
                                         height={260}
-                                        light="true"
                                         url="https://www.youtube.com/watch?v=97BEp-Q8gMs"
                                     />
                                 </Box>
@@ -305,8 +314,8 @@ const Home: NextPage = () => {
                                                 variant="body2"
                                                 color="secondary"
                                             >
-                                                Start crypto mining at any price
-                                                point
+                                                Accessible, democratized crypto
+                                                mining.
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -328,7 +337,7 @@ const Home: NextPage = () => {
                                                 color="secondary"
                                             >
                                                 Activities and team are public
-                                                and its code is open source
+                                                and code is open source
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -349,8 +358,9 @@ const Home: NextPage = () => {
                                                 variant="body2"
                                                 color="secondary"
                                             >
-                                                Solves the problem of the high
-                                                heat mining produces
+                                                Mitigates the impact of
+                                                intensive blockchain energy
+                                                usage.
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -366,10 +376,14 @@ const Home: NextPage = () => {
                         <Grid container spacing={3}>
                             <Grid container item xs={12}>
                                 <Grid item xs={12}>
-                                    <Typography variant="h4" color="secondary">
+                                    <Typography
+                                        variant="h4"
+                                        color="secondary"
+                                        align="center"
+                                    >
                                         You win no matter what with ShineMine
                                     </Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="body1" align="center">
                                         The more people that hold SHINE tokens
                                         will increase the value of your SHINE.
                                         The less people that hold SHINE
