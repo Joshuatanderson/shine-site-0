@@ -11,6 +11,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "@babel/core": "^7.17.8",
         "@emotion/react": "^11.8.2",
         "@emotion/styled": "^11.8.1",
         "@fontsource/bebas-neue": "^4.5.3",
