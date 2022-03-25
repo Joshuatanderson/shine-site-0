@@ -1,13 +1,12 @@
-// import { ThemeOptions } from '@mui/material/styles/';
-
 import { createTheme, ThemeOptions } from "@mui/material";
 import { purple } from "@mui/material/colors";
 
-export const dark = "#212936";
-export const yellow = "#F2C04A";
-export const white = "#fff";
-export const coral = "#E07453";
-export const seafoam = "#80BDB9";
+const dark = "#212936";
+const yellow = "#F2C04A";
+const lightYellow = "#FBDF78";
+const white = "#fff";
+const coral = "#E07453";
+const seafoam = "#80BDB9";
 
 const base: ThemeOptions = {
     typography: {
@@ -107,8 +106,8 @@ export const yellowTheme = createTheme({
             secondary: white,
         },
         background: {
-            paper: yellow,
-            default: yellow,
+            paper: lightYellow,
+            default: lightYellow,
         },
     },
 });
