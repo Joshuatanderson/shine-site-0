@@ -18,7 +18,7 @@ import Link from "./Link";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "@emotion/react";
 import { darkTheme } from "../styles/theme";
-import { ScopedCssBaseline } from "@mui/material";
+import { Grid, ScopedCssBaseline } from "@mui/material";
 
 const pages = [
     {
@@ -117,8 +117,41 @@ export const Header = () => {
                                         </Link>
                                     </Button>
                                 ))}
+                                <Button
+                                    key="buy-shine"
+                                    onClick={handleCloseNavMenu}
+                                    sx={{
+                                        my: 2,
+                                        color: "white",
+                                        display: "block",
+                                    }}
+                                >
+                                    <Typography variant="h6">
+                                        <Link
+                                            href="/buy"
+                                            sx={{ textDecoration: "none" }}
+                                        >
+                                            Buy SHINE
+                                        </Link>
+                                    </Typography>
+                                </Button>
                             </Box>
                             <Box sx={classes.popoutMenu}>
+                                <Grid
+                                    container
+                                    justifyContent="flex-end"
+                                    alignContent="center"
+                                >
+                                    <Typography align="center" variant="h6">
+                                        <Link
+                                            href="/buy"
+                                            sx={classes.menuButtonTextItems}
+                                        >
+                                            BUY SHINE
+                                        </Link>
+                                    </Typography>
+                                </Grid>
+
                                 <IconButton
                                     size="large"
                                     aria-label="menu"
@@ -157,6 +190,10 @@ export const Header = () => {
                                                     href={`/${page.path}`}
                                                     sx={
                                                         classes.menuButtonTextItems
+                                                    }
+                                                    color={
+                                                        darkTheme.palette
+                                                            .secondary.main
                                                     }
                                                 >
                                                     {page.display.toUpperCase()}
