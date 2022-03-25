@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import classNames from "classnames";
 
 import {
     Box,
@@ -23,7 +22,7 @@ import {
     CurrencyBitcoinOutlined,
     SolarPowerOutlined,
 } from "@mui/icons-material";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 import TitleBar from "../components/TitleBar";
 import Image from "next/image";
 
@@ -44,6 +43,21 @@ const classes = {
         paddingTop: "48px",
         paddingBottom: "48px",
     },
+    playerWrapper: {
+        position: "relative",
+        // display: "flex",
+        // width: "100%",
+        // flexGrow: 1,
+        // height: 200,
+        // paddingTop: "56.25%" /* Player ratio: 100 / (1280 / 720) */,
+    },
+    reactPlayer: {
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        width: "100%",
+        height: "100%",
+    },
 };
 
 const images = [Yahoo, Amb, Benzinga, CryptoDaily, NewsBtc];
@@ -62,11 +76,11 @@ const makeImages = images.map((img, index) => (
             src={img}
             sx={{
                 filter: "grayscale(100%)",
-                "-webkit-filter": "grayscale(100%)",
+                WebkitFilter: "grayscale(100%)",
                 transition: "all .3s",
                 "&:hover": {
                     filter: "grayscale(0%)",
-                    "-webkit-filter": "grayscale(0%)",
+                    WebkitFilter: "grayscale(0%)",
                 },
             }}
         />
@@ -208,8 +222,27 @@ const Home: NextPage = () => {
                                     begin, without the drawbacks.
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                {/* <ReactPlayer src={explainerVid}></ReactPlayer> */}
+                            <Grid
+                                item
+                                xs={12}
+                                sm={6}
+                                sx={{
+                                    justifyContent: "center",
+                                    alignContent: "center",
+                                }}
+                            >
+                                <Box sx={classes.playerWrapper}>
+                                    <ReactPlayer
+                                        sx={classes.reactPlayer}
+                                        width="100%"
+                                        height={260}
+                                        light="true"
+                                        url="https://www.youtube.com/watch?v=97BEp-Q8gMs"
+                                    />
+                                </Box>
+                                {/* <Player>
+                                    <source src="https://www.youtube.com/watch?v=97BEp-Q8gMs" />
+                                </Player> */}
                             </Grid>
                         </Grid>
                     </Container>
@@ -224,6 +257,7 @@ const Home: NextPage = () => {
                                     item
                                     container
                                     justifyContent="space-around"
+                                    xs={12}
                                 >
                                     <Button
                                         variant="contained"
@@ -342,7 +376,7 @@ const Home: NextPage = () => {
                                 </Typography>
                             </Grid>
                         </Grid>
-                        <Grid xs={12}>
+                        <Grid item xs={12}>
                             <Typography variant="h2">Roadmap</Typography>
                         </Grid>
                     </Container>
