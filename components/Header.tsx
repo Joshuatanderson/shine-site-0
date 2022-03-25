@@ -22,10 +22,6 @@ import { ScopedCssBaseline } from "@mui/material";
 
 const pages = [
     {
-        display: "Roadmap",
-        path: "roadmap",
-    },
-    {
         display: "Whitepaper",
         path: "whitepaper",
     },
@@ -71,25 +67,11 @@ export const Header = () => {
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
-        // router.push(href);
     };
-    // const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    //     setAnchorElUser(event.currentTarget);
-    // };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
-
-    // const handleClick = (event) => {
-    //     event.preventDefault();
-    //     console.log(event);
-    //     // router.push(href);
-    // };
 
     return (
         <ThemeProvider theme={darkTheme}>

@@ -64,20 +64,26 @@ const Footer = () => {
                                 justifyContent="center"
                                 alignContent="center"
                             >
-                                <Twitter
-                                    href="https://twitter.com/ShineMine_io"
+                                <Link
                                     target="_blank"
-                                />
-                                <Instagram
+                                    href="https://twitter.com/ShineMine_io"
+                                >
+                                    <Twitter />
+                                </Link>
+                                <Link
                                     target="_blank"
                                     href="https://www.instagram.com/shinemine.io/"
-                                />
-                                <SvgIcon
+                                >
+                                    <Instagram />
+                                </Link>
+                                <Link
                                     target="_blank"
                                     href="https://discord.gg/exsBtmkpxh"
                                 >
-                                    <FaDiscord />
-                                </SvgIcon>
+                                    <SvgIcon>
+                                        <FaDiscord />
+                                    </SvgIcon>
+                                </Link>
                             </Grid>
                         </Grid>
                     </Box>

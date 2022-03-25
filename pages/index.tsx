@@ -31,6 +31,8 @@ import Benzinga from "../public/featured/Benzinga.png";
 import CryptoDaily from "../public/featured/cryptodaily.png";
 import Yahoo from "../public/featured/Yahoo.png";
 import NewsBtc from "../public/featured/newsBtc.png";
+import Link from "../components/Link";
+import { palette } from "@mui/system";
 
 const classes = {
     icon: {
@@ -110,10 +112,14 @@ const Home: NextPage = () => {
                             container
                             justifyContent="space-around"
                         >
-                            <Button variant="contained" color="primary">
+                            <Button variant="contained" href="/buy">
                                 Buy Shine
                             </Button>
-                            <Button variant="contained" color="primary">
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%202.2.0.pdf"
+                            >
                                 View Whitepaper
                             </Button>
                         </Grid>
@@ -257,12 +263,14 @@ const Home: NextPage = () => {
                                     <Button
                                         variant="contained"
                                         color="secondary"
+                                        href="/buy"
                                     >
                                         Buy Shine
                                     </Button>
                                     <Button
                                         variant="contained"
                                         color="secondary"
+                                        href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%202.2.0.pdf"
                                     >
                                         View Whitepaper
                                     </Button>
@@ -387,8 +395,13 @@ const Home: NextPage = () => {
                                 xs={12}
                                 justifyContent="space-around"
                             >
-                                <Button variant="contained">Buy Shine</Button>
-                                <Button variant="contained">
+                                <Button variant="contained" href="/buy">
+                                    Buy Shine
+                                </Button>
+                                <Button
+                                    variant="contained"
+                                    href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%202.2.0.pdf"
+                                >
                                     View Whitepaper
                                 </Button>
                             </Grid>
