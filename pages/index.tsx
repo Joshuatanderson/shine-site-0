@@ -26,6 +26,7 @@ import ReactPlayer from "react-player/youtube";
 import TitleBar from "../components/TitleBar";
 import Image from "next/image";
 
+import ComparisonChart from "../public/shineCompChart.png";
 import Amb from "../public/featured/amb.png";
 import Benzinga from "../public/featured/Benzinga.png";
 import CryptoDaily from "../public/featured/cryptodaily.png";
@@ -388,7 +389,23 @@ const Home: NextPage = () => {
                 <ScopedCssBaseline>
                     <Container sx={classes.section}>
                         <Grid container spacing={3}>
-                            <Grid container item xs={12}>
+                            <Grid
+                                container
+                                item
+                                xs={12}
+                                spacing={3}
+                                justifyContent="center"
+                            >
+                                <Grid
+                                    container
+                                    item
+                                    xs={12}
+                                    md={8}
+                                    lg={6}
+                                    justifyContent="center"
+                                >
+                                    <Image src={ComparisonChart} />
+                                </Grid>
                                 <Grid item xs={12}>
                                     <Typography
                                         variant="h4"
