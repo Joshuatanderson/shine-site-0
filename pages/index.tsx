@@ -59,6 +59,9 @@ const classes = {
         textDecoration: "line-through",
         textDecorationColor: coral,
     },
+    paragraph: {
+        marginTop: darkTheme.spacing(1),
+    },
 };
 
 const images = [Yahoo, Amb, Benzinga, CryptoDaily, NewsBtc];
@@ -106,8 +109,8 @@ const Home: NextPage = () => {
                                 align="center"
                                 fontStyle="italic"
                             >
-                                Earn passive BNB rewards through tokenized
-                                mining.
+                                Earn passive BNB rewards <br />
+                                through tokenized mining.
                             </Typography>
                         </Grid>
                         <Grid
@@ -205,7 +208,7 @@ const Home: NextPage = () => {
                 <ScopedCssBaseline>
                     <Container sx={classes.section}>
                         <Grid container spacing={3}>
-                            <Grid item xs={12} sm={6}>
+                            <Grid container item xs={12} sm={6}>
                                 <Typography variant="h3">
                                     <Box
                                         component="u"
@@ -215,18 +218,28 @@ const Home: NextPage = () => {
                                     </Box>
                                     the better way to mine
                                 </Typography>
-                                <Typography variant="body2">
+
+                                <Typography
+                                    variant="body2"
+                                    sx={classes.paragraph}
+                                >
                                     ShineMine breaks down barriers and allows
                                     anyone to get involved with crypto mining.
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography
+                                    variant="body2"
+                                    sx={classes.paragraph}
+                                >
                                     ShineMine is a tokenized crypto mining
                                     operation that allows anyone to reap the
                                     profits of crypto mining at any price point
                                     regardless of their knowledge or experience
                                     with crypto.
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography
+                                    variant="body2"
+                                    sx={classes.paragraph}
+                                >
                                     All someone needs to do is hold SHINE tokens
                                     to participate. Once SHINE tokens are
                                     purchased, the benefits of crypto mining
@@ -338,7 +351,7 @@ const Home: NextPage = () => {
                                                 color="secondary"
                                             >
                                                 Activities and team are public
-                                                and code is open source
+                                                and code is open source.
                                             </Typography>
                                         </Grid>
                                     </Grid>
