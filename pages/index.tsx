@@ -555,7 +555,7 @@ const Home: NextPage = () => {
                                     <Typography variant="h5">Token</Typography>
                                     <Typography variant="body1">
                                         Launch a community marketplace for Shine
-                                        Mine NFT's.
+                                        Mine NFT&apos;s.
                                     </Typography>
                                     <Typography variant="body1">
                                         Hit $1.2 billion in market cap
