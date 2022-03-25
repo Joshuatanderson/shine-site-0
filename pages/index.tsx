@@ -31,8 +31,8 @@ import Benzinga from "../public/featured/Benzinga.png";
 import CryptoDaily from "../public/featured/cryptodaily.png";
 import Yahoo from "../public/featured/Yahoo.png";
 import NewsBtc from "../public/featured/newsBtc.png";
-import Link from "../components/Link";
-import { palette } from "@mui/system";
+
+import { coral, yellow, seafoam } from "../styles/theme";
 
 const classes = {
     icon: {
@@ -241,9 +241,6 @@ const Home: NextPage = () => {
                                         url="https://www.youtube.com/watch?v=97BEp-Q8gMs"
                                     />
                                 </Box>
-                                {/* <Player>
-                                    <source src="https://www.youtube.com/watch?v=97BEp-Q8gMs" />
-                                </Player> */}
                             </Grid>
                         </Grid>
                     </Container>
@@ -366,21 +363,205 @@ const Home: NextPage = () => {
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
                     <Container sx={classes.section}>
-                        <Grid container item xs={12}>
-                            <Grid item xs={12}>
-                                <Typography variant="h4" color="secondary">
-                                    You win no matter what with ShineMine
-                                </Typography>
-                                <Typography variant="body1">
-                                    The more people that hold SHINE tokens will
-                                    increase the value of your SHINE. The less
-                                    people that hold SHINE increases the amount
-                                    of rewards you can claim.
-                                </Typography>
+                        <Grid container spacing={3}>
+                            <Grid container item xs={12}>
+                                <Grid item xs={12}>
+                                    <Typography variant="h4" color="secondary">
+                                        You win no matter what with ShineMine
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        The more people that hold SHINE tokens
+                                        will increase the value of your SHINE.
+                                        The less people that hold SHINE
+                                        increases the amount of rewards you can
+                                        claim.
+                                    </Typography>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Typography variant="h2">Roadmap</Typography>
+                            <Grid item xs={12}>
+                                <Typography variant="h2">Roadmap</Typography>
+                            </Grid>
+                            <Grid item xs={12} sm={6} container>
+                                <Typography
+                                    variant="h3"
+                                    sx={{
+                                        textDecoration: "underline",
+                                        textDecorationColor: coral,
+                                    }}
+                                >
+                                    PHASE 1
+                                </Typography>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sx={{
+                                        border: 4,
+                                        borderRadius: 2,
+                                        padding: 4,
+                                        borderColor: coral,
+                                    }}
+                                >
+                                    <Typography variant="h5">
+                                        MARKETING
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Launch website.
+                                    </Typography>
+                                    <Typography variant="h5">Token</Typography>
+                                    <Typography variant="body1">
+                                        ✅ Find facility to host initial
+                                        ShineMine mining rigs.
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Line up mining rig supplier.
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Launch presale
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={12} sm={6} container>
+                                <Typography
+                                    variant="h3"
+                                    sx={{
+                                        textDecoration: "underline",
+                                        textDecorationColor: yellow,
+                                    }}
+                                >
+                                    PHASE 2
+                                </Typography>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sx={{
+                                        border: 4,
+                                        borderRadius: 2,
+                                        padding: 4,
+                                        borderColor: yellow,
+                                    }}
+                                >
+                                    <Typography variant="h5">
+                                        MARKETING
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Whitepaper redesign
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Launch national marketing campaign.
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        2,000 Discord members
+                                    </Typography>
+                                    <Typography variant="h5">Token</Typography>
+                                    <Typography variant="body1">
+                                        Hit $100 million in market cap
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Listing on Coin Gecko
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Listing on Coin Market Cap
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        Begin listing discussions with
+                                        centralized exchanges.
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        1,000 SHINE holders
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        ✅ Start security audit
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container item xs={12} sm={6}>
+                                <Typography
+                                    variant="h3"
+                                    sx={{
+                                        textDecoration: "underline",
+                                        textDecorationColor: seafoam,
+                                    }}
+                                >
+                                    PHASE 3
+                                </Typography>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sx={{
+                                        border: 4,
+                                        borderRadius: 2,
+                                        padding: 4,
+                                        borderColor: seafoam,
+                                    }}
+                                >
+                                    <Typography variant="h5">
+                                        MARKETING
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        5,000 Discord members
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        International marketing campaign
+                                    </Typography>
+                                    <Typography variant="h5">
+                                        MISSION
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        Achieve carbon neutrality for Shine
+                                        Mine.
+                                    </Typography>
+                                    <Typography variant="h5">Token</Typography>
+                                    <Typography variant="body1">
+                                        Hit $500 million in market cap
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        10,000 SHINE holders
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        List on centralized exchanges.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container item xs={12} sm={6}>
+                                <Typography
+                                    variant="h3"
+                                    sx={{
+                                        textDecoration: "underline",
+                                        textDecorationColor: coral,
+                                    }}
+                                >
+                                    PHASE 4
+                                </Typography>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sx={{
+                                        border: 4,
+                                        borderRadius: 2,
+                                        padding: 4,
+                                        borderColor: coral,
+                                    }}
+                                >
+                                    <Typography variant="h5">
+                                        MARKETING
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        10,000 Discord members
+                                    </Typography>
+                                    <Typography variant="h5">
+                                        MISSION
+                                    </Typography>
+                                    <Typography variant="body1">DAO</Typography>
+                                    <Typography variant="h5">Token</Typography>
+                                    <Typography variant="body1">
+                                        Launch a community marketplace for Shine
+                                        Mine NFT's.
+                                    </Typography>
+                                    <Typography variant="body1">
+                                        Hit $1.2 billion in market cap
+                                    </Typography>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Container>
                 </ScopedCssBaseline>
