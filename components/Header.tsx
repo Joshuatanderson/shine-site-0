@@ -43,8 +43,21 @@ const pages = [
     },
 ];
 
-// const pages = ["Roadmap", "Whitepaper", "Team", "Faq", "Tokenomics"];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const classes = {
+    menuButtonTextItems: {
+        textDecoration: "none",
+    },
+    menuTextItems: {
+        flexGrow: 1,
+        display: { xs: "none", md: "flex" },
+        justifyContent: "flex-end",
+    },
+    popoutMenu: {
+        flexGrow: 1,
+        display: { xs: "flex", md: "none" },
+        justifyContent: "flex-end",
+    },
+};
 
 export const Header = () => {
     const router = useRouter();
@@ -72,11 +85,11 @@ export const Header = () => {
         setAnchorElUser(null);
     };
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        console.log(event);
-        // router.push(href);
-    };
+    // const handleClick = (event) => {
+    //     event.preventDefault();
+    //     console.log(event);
+    //     // router.push(href);
+    // };
 
     return (
         <ThemeProvider theme={darkTheme}>
@@ -88,19 +101,12 @@ export const Header = () => {
                         backgroundImage: "none",
                     }}
                 >
-                    <Container maxWidth="xl">
+                    <Container>
                         <Toolbar disableGutters>
-                            {/* <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-                    >
-                        ShineMine
-                    </Typography> */}
                             <Box
-                                component="a"
+                                component={Link}
                                 sx={{ height: 32, maxHeight: 32 }}
+                                href="/"
                             >
                                 <Image
                                     height={31.37}
@@ -109,23 +115,8 @@ export const Header = () => {
                                     alt="shine logo"
                                 />
                             </Box>
-                            {/* <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "flex", md: "none" },
-                        }}
-                    >
-                        ShineMine
-                    </Typography> */}
-                            <Box
-                                sx={{
-                                    flexGrow: 1,
-                                    display: { xs: "none", md: "flex" },
-                                }}
-                            >
+
+                            <Box sx={classes.menuTextItems}>
                                 {pages.map((page) => (
                                     <Button
                                         key={page.display}
@@ -138,58 +129,14 @@ export const Header = () => {
                                     >
                                         <Link
                                             href={`/${page.path}`}
-                                            onClick={(e) => handleClick(e)}
+                                            sx={{ textDecoration: "none" }}
                                         >
                                             {page.display}
                                         </Link>
                                     </Button>
                                 ))}
                             </Box>
-
-                            {/* <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <Typography
-                                variant="h6"
-                                color="secondary"
-                                onClick={handleOpenUserMenu}
-                            >
-                                <Avatar
-                            </Typography>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: "45px" }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: "top",
-                                horizontal: "right",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "right",
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem
-                                    key={setting}
-                                    onClick={handleCloseUserMenu}
-                                >
-                                    <Typography textAlign="center">
-                                        {setting}
-                                    </Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box> */}
-                            <Box
-                                sx={{
-                                    flexGrow: 1,
-                                    display: { xs: "flex", md: "none" },
-                                }}
-                            >
+                            <Box sx={classes.popoutMenu}>
                                 <IconButton
                                     size="large"
                                     aria-label="menu"
@@ -223,9 +170,12 @@ export const Header = () => {
                                             key={page.path}
                                             onClick={handleCloseNavMenu}
                                         >
-                                            <Typography textAlign="center">
+                                            <Typography
+                                                textAlign="center"
+                                                sx={classes.menuButtonTextItems}
+                                            >
                                                 <Link href={`/${page.path}`}>
-                                                    {page.display}
+                                                    {page.display.toUpperCase()}
                                                 </Link>
                                             </Typography>
                                         </MenuItem>
