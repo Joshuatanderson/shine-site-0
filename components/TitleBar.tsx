@@ -19,7 +19,7 @@ interface TitleBarProps {
 
 const classes = {
     title: {
-        fontSize: "4rem",
+        fontSize: "3.5rem",
     },
     icon: {
         fontSize: 20,
@@ -32,8 +32,8 @@ const classes = {
 const TitleBar = ({ title, children }: TitleBarProps) => {
     return (
         <Container sx={{ paddingBottom: "48px" }}>
-            <Grid container spacing={3}>
-                <Grid item xs={12}>
+            <Grid container spacing={3} justifyContent="center">
+                <Grid item xs={10}>
                     <Typography variant="h1" align="center" sx={classes.title}>
                         {title}
                     </Typography>

@@ -93,7 +93,7 @@ const Team = () => {
         <>
             <ThemeProvider theme={darkTheme}>
                 <ScopedCssBaseline>
-                    <TitleBar title="meet the team" />
+                    <TitleBar title="team" />
                 </ScopedCssBaseline>
             </ThemeProvider>
             <ThemeProvider theme={lightTheme}>
