@@ -152,11 +152,13 @@ export const Header = () => {
                                             key={page.path}
                                             onClick={handleCloseNavMenu}
                                         >
-                                            <Typography
-                                                textAlign="center"
-                                                sx={classes.menuButtonTextItems}
-                                            >
-                                                <Link href={`/${page.path}`}>
+                                            <Typography textAlign="center">
+                                                <Link
+                                                    href={`/${page.path}`}
+                                                    sx={
+                                                        classes.menuButtonTextItems
+                                                    }
+                                                >
                                                     {page.display.toUpperCase()}
                                                 </Link>
                                             </Typography>
