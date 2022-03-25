@@ -3,6 +3,7 @@ const nextConfig = {
     reactStrictMode: true,
     rules: {
         "react/no-unescaped-entities": "off",
+        ignoreBuildErrors: "true",
     },
 };
 
