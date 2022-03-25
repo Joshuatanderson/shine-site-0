@@ -317,9 +317,7 @@ const Faq = () => {
                                 alignContent="center"
                                 color={darkTheme.palette.common.white}
                             >
-                                <Typography variant="body1" align="center">
-                                    {activeItem.description}
-                                </Typography>
+                                {activeItem.description}
                             </Grid>
                         </Grid>
                     </Container>

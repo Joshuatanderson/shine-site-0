@@ -75,7 +75,6 @@ const Buy = () => {
                                         sx={classes.reactPlayer}
                                         width="100%"
                                         height="70vw"
-                                        light="true"
                                         url="https://www.youtube.com/watch?v=AQKU73zp43c&t=1s"
                                     />
                                 </Box>
