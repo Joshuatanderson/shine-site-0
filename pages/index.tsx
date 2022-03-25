@@ -45,11 +45,6 @@ const classes = {
     },
     playerWrapper: {
         position: "relative",
-        // display: "flex",
-        // width: "100%",
-        // flexGrow: 1,
-        // height: 200,
-        // paddingTop: "56.25%" /* Player ratio: 100 / (1280 / 720) */,
     },
     reactPlayer: {
         position: "absolute",
