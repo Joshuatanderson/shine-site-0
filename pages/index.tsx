@@ -505,7 +505,7 @@ const Home: NextPage = () => {
                                         ✅ Listing on Coin Gecko
                                     </Typography>
                                     <Typography variant="body1">
-                                        ✅ Listing on Coin Market Cap
+                                        Listing on Coin Market Cap
                                     </Typography>
                                     <Typography variant="body1">
                                         Begin listing discussions with
