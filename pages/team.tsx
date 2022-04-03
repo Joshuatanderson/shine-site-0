@@ -4,6 +4,7 @@ import {
     Container,
     Grid,
     ScopedCssBaseline,
+    SvgIcon,
     Typography,
 } from "@mui/material";
 import Image from "next/image";
@@ -20,6 +21,9 @@ import stephen from "../public/team/stephen.jpg";
 import tahe from "../public/team/tahe.jpg";
 import TitleBar from "../components/TitleBar";
 
+import { FaLinkedin } from "react-icons/fa";
+import Link from "../components/Link";
+
 const team = [
     {
         name: "Noah Newman",
@@ -27,6 +31,7 @@ const team = [
         description: "Cofounder, Project Lead",
         details:
             "Noah entered the crypto space in 2015 and quickly developed a passion for the industry . He sold his business and transitioned full time into active crypto portfolio management in 2020. The vision for ShineMine came from his own desire to diversify his holdings and empower others to benefit from the emerging opportunities of cryptocurrency mining.",
+        linkedIn: "https://www.linkedin.com/in/noah-newman-2314aa222/",
     },
     {
         name: "Adam Enamorado",
@@ -34,6 +39,7 @@ const team = [
         description: "Cofounder, Operations Lead",
         details:
             "Adam entered the crypto space in 2015, leading an online think tank on blockchain and its emerging applications. His cross-industry business experience  and desire to innovate drives ShineMine’s mission of creating a new, better way to mine cryptocurrency.",
+        linkedIn: "https://www.linkedin.com/in/adamenamorado/",
     },
     {
         name: "Joshua Anderson",
@@ -41,6 +47,7 @@ const team = [
         description: "Tech Lead",
         details:
             "Joshua is an LSU MBA graduate who steered his career as a software engineer towards blockchain development after falling in love with the tech behind it. He also serves as co-director for Startup Grind Baton Rouge, in partnership with Google for Startups.",
+        linkedIn: "https://www.linkedin.com/in/joshua-anderson-mba-2aab9b89/",
     },
     {
         name: "Tahe Governor",
@@ -55,6 +62,7 @@ const team = [
         description: "Community Manager",
         details:
             "Maria is a crypto enthusiast with a background in mass media communication. She likes making people feel welcome in the Shine Discord and loves being part of a fun community.",
+        linkedIn: "https://www.linkedin.com/in/maria-goddard/",
     },
     {
         name: "Conner LeBlanc",
@@ -62,6 +70,8 @@ const team = [
         description: "Strategic Advisor",
         details:
             "Conner is an LSU JD/MBA graduate who co-founded Zenith, an immersive content company specializing in VR tours. He currently serves as business development manager for General Informatics. ",
+        linkedIn:
+            "https://www.linkedin.com/in/conner-leblanc-jd-mba-a7618a147/",
     },
     {
         name: "Matthew Galeano",
@@ -69,6 +79,7 @@ const team = [
         description: "Engineering Advisor",
         details:
             "Matthew has a mechanical engineering background and a passion for renewable energy. In 2016, he entered the crypto space applying his capital and time towards sustainable blockchain solutions. He is currently working on an aerospace project that is sending a rover to the moon.",
+        linkedIn: "https://www.linkedin.com/in/matthew-galeano-06a509a8/",
     },
     {
         name: "Stephen Sommers",
@@ -76,6 +87,7 @@ const team = [
         description: "Business Advisor",
         details:
             "Stephen is an experienced sales and investment advisor having brokered hundreds of deals in Real Estate and 4 years running his own team and Real Estate investment company.",
+        linkedIn: "https://www.linkedin.com/in/stephen-sommers-highlandgroup/",
     },
 ];
 
@@ -131,6 +143,24 @@ const Team = () => {
                                     <Typography variant="body2" align="center">
                                         {member.details}
                                     </Typography>
+                                    {member.linkedIn && (
+                                        <Grid
+                                            container
+                                            item
+                                            xs={12}
+                                            justifyContent="center"
+                                        >
+                                            <Link
+                                                target="_blank"
+                                                href={member.linkedIn}
+                                                align="center"
+                                            >
+                                                <SvgIcon>
+                                                    <FaLinkedin />
+                                                </SvgIcon>
+                                            </Link>
+                                        </Grid>
+                                    )}
                                 </Grid>
                             ))}
                         </Grid>
