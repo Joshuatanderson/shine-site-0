@@ -26,7 +26,10 @@ import ReactPlayer from "react-player/youtube";
 import TitleBar from "../components/TitleBar";
 import Image from "next/image";
 
-import ComparisonChart from "../public/shineCompChart.png";
+import ComparisonChart from "../public/comparisonChart.png";
+import OperationStructure from "../public/operationStructure.png";
+import ApyChart from "../public/apyChart.png";
+
 import Amb from "../public/featured/amb.png";
 import Benzinga from "../public/featured/Benzinga.png";
 import CryptoDaily from "../public/featured/cryptodaily.png";
@@ -396,14 +399,7 @@ const Home: NextPage = () => {
                                 spacing={3}
                                 justifyContent="center"
                             >
-                                <Grid
-                                    container
-                                    item
-                                    xs={12}
-                                    md={8}
-                                    lg={6}
-                                    justifyContent="center"
-                                >
+                                <Grid container item xs={12} md={8} lg={6}>
                                     <Image src={ComparisonChart} />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -423,6 +419,107 @@ const Home: NextPage = () => {
                                     </Typography>
                                 </Grid>
                             </Grid>
+                        </Grid>
+                    </Container>
+                </ScopedCssBaseline>
+            </ThemeProvider>
+            <ThemeProvider theme={lightTheme}>
+                <ScopedCssBaseline>
+                    <Container sx={classes.section}>
+                        <Grid container item spacing={3}>
+                            <Grid item xs={12}>
+                                <Typography variant="h3">
+                                    Staking & Rewards
+                                </Typography>
+                            </Grid>
+                            <Grid
+                                container
+                                item
+                                xs={12}
+                                justifyContent="center"
+                            >
+                                <Grid
+                                    container
+                                    item
+                                    xs={12}
+                                    md={8}
+                                    lg={6}
+                                    justifyContent="center"
+                                >
+                                    <Image src={ApyChart} />
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Typography variant="h5">
+                                    APY Projections
+                                </Typography>
+                                <Typography variant="body1">
+                                    APY projections are calculated based on an
+                                    estimated total APY from the mining
+                                    operation at today&apos;s profitability
+                                    rate. Half of the total APY is allocated to
+                                    the rewards pool.
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Typography variant="h5">
+                                    Reinvestment (included in APY)
+                                </Typography>
+                                <Typography variant="body1">
+                                    Half of the total APY is allocated to
+                                    reinvestment in acquiring additional mining
+                                    equipment and updating obsolete units in
+                                    order to expand the mining operation thus
+                                    increasing the rewards pool as well as
+                                    ensuring the longevity of the project with
+                                    continued procurement of the most
+                                    competitive hashing computers.
+                                </Typography>
+                            </Grid>
+
+                            <Grid
+                                container
+                                item
+                                xs={12}
+                                justifyContent="center"
+                            >
+                                <Grid
+                                    container
+                                    item
+                                    xs={12}
+                                    md={8}
+                                    lg={6}
+                                    justifyContent="center"
+                                >
+                                    <Image src={OperationStructure} />
+                                </Grid>
+                            </Grid>
+                            <Grid item xs={12} justifyContent="center">
+                                <Typography variant="h5">
+                                    Reward Pool Allocations
+                                </Typography>
+                                <Typography variant="body1">
+                                    The Silver Pool will receive 50% of the
+                                    rewards pool allocation. The Gold Pool will
+                                    receive 25% of the rewards pool allocation
+                                    and the Diamond Pool will also receive 25%
+                                    of the rewards pool allocation. Holders
+                                    staking at the Silver level will claim
+                                    rewards from the Silver Pool. Holders
+                                    staking at the Gold level will receive
+                                    rewards from both the Silver and the Gold
+                                    pools. Holders staking at the Diamond level
+                                    will receive rewards from all three pools.
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                    </Container>
+                </ScopedCssBaseline>
+            </ThemeProvider>
+            <ThemeProvider theme={lightTheme}>
+                <ScopedCssBaseline>
+                    <Container>
+                        <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <Typography variant="h2">Roadmap</Typography>
                             </Grid>
