@@ -5,6 +5,7 @@ import {
     ScopedCssBaseline,
     SvgIcon,
     Typography,
+    Box,
 } from "@mui/material";
 import { ThemeProvider } from "@mui/private-theming";
 import React, { Children, Component } from "react";
@@ -27,11 +28,25 @@ const classes = {
     discordIcon: {
         fontSize: 22,
     },
+    container: {
+        // https://www.joshwcomeau.com/gradient-generator/
+        backgroundImage: `linear-gradient(
+        45deg,
+        hsl(223deg 75% 9%) 0%,
+        hsl(210deg 89% 12%) 26%,
+        hsl(203deg 100% 14%) 39%,
+        hsl(199deg 100% 16%) 50%,
+        hsl(195deg 100% 19%) 61%,
+        hsl(191deg 100% 21%) 74%,
+        hsl(187deg 97% 23%) 100%
+    );`,
+        paddingBottom: "48px",
+    },
 };
 
 const TitleBar = ({ title, children }: TitleBarProps) => {
     return (
-        <Container sx={{ paddingBottom: "48px" }}>
+        <Container sx={classes.container}>
             <Grid container spacing={3} justifyContent="center">
                 <Grid item xs={10}>
                     <Typography variant="h1" align="center" sx={classes.title}>
