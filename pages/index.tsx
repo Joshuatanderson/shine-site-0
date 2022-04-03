@@ -476,6 +476,17 @@ const Home: NextPage = () => {
                                     competitive hashing computers.
                                 </Typography>
                             </Grid>
+                            <Grid item xs={12} md={6}>
+                                <Typography variant="h5">
+                                    Calculation details
+                                </Typography>
+                                <Typography variant="body1">
+                                    Compounded APY is calculated based on a
+                                    holder reinvesting their BNB rewards into
+                                    additional SHINE tokens staked in their
+                                    respective pool.
+                                </Typography>
+                            </Grid>
 
                             <Grid
                                 container
