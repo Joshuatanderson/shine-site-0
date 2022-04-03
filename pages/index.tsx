@@ -529,7 +529,7 @@ const Home: NextPage = () => {
             </ThemeProvider>
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
-                    <Container>
+                    <Container sx={classes.section}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <Typography variant="h2">Roadmap</Typography>
