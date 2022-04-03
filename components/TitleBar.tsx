@@ -30,16 +30,16 @@ const classes = {
     },
     container: {
         // https://www.joshwcomeau.com/gradient-generator/
-        backgroundImage: `linear-gradient(
-        45deg,
-        hsl(223deg 75% 9%) 0%,
-        hsl(210deg 89% 12%) 26%,
-        hsl(203deg 100% 14%) 39%,
-        hsl(199deg 100% 16%) 50%,
-        hsl(195deg 100% 19%) 61%,
-        hsl(191deg 100% 21%) 74%,
-        hsl(187deg 97% 23%) 100%
-    );`,
+        //     backgroundImage: `linear-gradient(
+        //     45deg,
+        //     hsl(223deg 75% 9%) 0%,
+        //     hsl(210deg 89% 12%) 26%,
+        //     hsl(203deg 100% 14%) 39%,
+        //     hsl(199deg 100% 16%) 50%,
+        //     hsl(195deg 100% 19%) 61%,
+        //     hsl(191deg 100% 21%) 74%,
+        //     hsl(187deg 97% 23%) 100%
+        // );`,
         paddingBottom: "48px",
     },
 };
