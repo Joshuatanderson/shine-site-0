@@ -457,8 +457,8 @@ const Home: NextPage = () => {
                                     APY projections are calculated based on an
                                     estimated total APY from the mining
                                     operation at today&apos;s profitability
-                                    rate. Half of the total APY is allocated to
-                                    the rewards pool.
+                                    rate. Half of the rewards generated are
+                                    allocated to the rewards pool.
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} md={6}>
@@ -466,10 +466,10 @@ const Home: NextPage = () => {
                                     Reinvestment (included in APY)
                                 </Typography>
                                 <Typography variant="body1">
-                                    Half of the total APY is allocated to
-                                    reinvestment in acquiring additional mining
-                                    equipment and updating obsolete units in
-                                    order to expand the mining operation thus
+                                    Half of the rewards generated are allocated
+                                    to reinvestment in acquiring additional
+                                    mining equipment and updating obsolete units
+                                    in order to expand the mining operation thus
                                     increasing the rewards pool as well as
                                     ensuring the longevity of the project with
                                     continued procurement of the most
