@@ -37,6 +37,14 @@ const pages = [
         display: "Tokenomics",
         path: "tokenomics",
     },
+    {
+        display: "staking",
+        path: "#staking",
+    },
+    {
+        display: "Roadmap",
+        path: "#roadmap",
+    },
 ];
 
 const classes = {

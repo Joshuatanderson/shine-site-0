@@ -11,7 +11,7 @@ import React, { Children, Component } from "react";
 import { darkTheme, lightTheme } from "../styles/theme";
 import Link from "../components/Link";
 import { Box } from "@mui/system";
-import { Instagram, Twitter } from "@mui/icons-material";
+import { Instagram, Telegram, Twitter } from "@mui/icons-material";
 import { FaDiscord } from "react-icons/fa";
 import { isAbsolute } from "node:path/win32";
 
@@ -25,6 +25,12 @@ const classes = {
     },
     footerCont: {
         width: "100%",
+    },
+    icon: {
+        fontSize: 20,
+    },
+    discordIcon: {
+        fontSize: 22,
     },
 };
 
@@ -68,21 +74,27 @@ const Footer = () => {
                                     target="_blank"
                                     href="https://twitter.com/ShineMine_io"
                                 >
-                                    <Twitter />
+                                    <Twitter sx={classes.icon} />
                                 </Link>
                                 <Link
                                     target="_blank"
                                     href="https://www.instagram.com/shinemine.io/"
                                 >
-                                    <Instagram />
+                                    <Instagram sx={classes.icon} />
                                 </Link>
                                 <Link
                                     target="_blank"
                                     href="https://discord.gg/exsBtmkpxh"
                                 >
-                                    <SvgIcon>
+                                    <SvgIcon sx={classes.discordIcon}>
                                         <FaDiscord />
                                     </SvgIcon>
+                                </Link>
+                                <Link
+                                    target="_blank"
+                                    href="https://t.me/+qb0dOY9UZOE4OWEx"
+                                >
+                                    <Telegram sx={classes.icon} />
                                 </Link>
                             </Grid>
                         </Grid>

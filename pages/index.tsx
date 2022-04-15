@@ -426,7 +426,7 @@ const Home: NextPage = () => {
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
                     <Container sx={classes.section}>
-                        <Grid container item spacing={3}>
+                        <Grid container item spacing={3} id="staking">
                             <Grid item xs={12}>
                                 <Typography variant="h3">
                                     Staking & Rewards
@@ -530,7 +530,7 @@ const Home: NextPage = () => {
             <ThemeProvider theme={lightTheme}>
                 <ScopedCssBaseline>
                     <Container sx={classes.section}>
-                        <Grid container spacing={3}>
+                        <Grid container spacing={3} id="roadmap">
                             <Grid item xs={12}>
                                 <Typography variant="h2">Roadmap</Typography>
                             </Grid>

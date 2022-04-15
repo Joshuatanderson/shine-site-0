@@ -1,4 +1,4 @@
-import { Instagram, Twitter } from "@mui/icons-material";
+import { Instagram, Twitter, Telegram } from "@mui/icons-material";
 import {
     Container,
     Grid,
@@ -76,6 +76,9 @@ const TitleBar = ({ title, children }: TitleBarProps) => {
                         <SvgIcon sx={classes.discordIcon}>
                             <FaDiscord />
                         </SvgIcon>
+                    </Link>
+                    <Link target="_blank" href="https://t.me/+qb0dOY9UZOE4OWEx">
+                        <Telegram sx={classes.icon} />
                     </Link>
                 </Grid>
                 {children}
