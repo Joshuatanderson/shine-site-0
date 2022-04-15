@@ -40,7 +40,7 @@ const classes = {
         //     hsl(191deg 100% 21%) 74%,
         //     hsl(187deg 97% 23%) 100%
         // );`,
-        paddingBottom: "48px",
+        paddingBottom: "63px",
     },
 };
 
@@ -58,7 +58,7 @@ const TitleBar = ({ title, children }: TitleBarProps) => {
                     item
                     xs={1}
                     flexDirection="column"
-                    sx={{ position: "absolute", right: 20 }}
+                    sx={{ position: "absolute", right: 20, top: 45 }}
                 >
                     <Link
                         target="_blank"

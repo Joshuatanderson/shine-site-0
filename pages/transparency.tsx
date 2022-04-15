@@ -73,7 +73,7 @@ const Transparency = () => {
                                 </Typography>
                                 <Typography variant="body1" sx={classes.body}>
                                     View our locked liquidity (secured through
-                                    CryptEx&apos;s locking service)
+                                    CryptEx&apos;s locking service){" "}
                                     <Link href="https://cryptexlock.me/pair/56/0x1c05535C3f51b6C4Eb3aB86Cd3B8Be64271B2564">
                                         here.
                                     </Link>

@@ -38,6 +38,10 @@ const pages = [
         path: "tokenomics",
     },
     {
+        display: "Transparency",
+        path: "transparency",
+    },
+    {
         display: "staking",
         path: "#staking",
     },
