@@ -145,11 +145,17 @@ export const Header = () => {
                                 >
                                     <Typography variant="h6">
                                         <Link
+                                            href="https://shinerewards.io"
+                                            sx={{ textDecoration: "none" }}
+                                        >
+                                            Launch App
+                                        </Link>
+                                        {/* <Link
                                             href="/buy"
                                             sx={{ textDecoration: "none" }}
                                         >
                                             Buy SHINE
-                                        </Link>
+                                        </Link> */}
                                     </Typography>
                                 </Button>
                             </Box>
@@ -161,11 +167,17 @@ export const Header = () => {
                                 >
                                     <Typography align="center" variant="h6">
                                         <Link
+                                            href="https://shinerewards.io"
+                                            sx={classes.menuButtonTextItems}
+                                        >
+                                            Launch App
+                                        </Link>
+                                        {/* <Link
                                             href="/buy"
                                             sx={classes.menuButtonTextItems}
                                         >
                                             BUY SHINE
-                                        </Link>
+                                        </Link> */}
                                     </Typography>
                                 </Grid>
 
