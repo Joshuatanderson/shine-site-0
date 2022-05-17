@@ -123,15 +123,26 @@ const Home: NextPage = () => {
                             container
                             justifyContent="space-around"
                         >
-                            <Button variant="contained" href="/buy">
-                                Buy Shine
-                            </Button>
                             <Button
+                                variant="contained"
+                                color="primary"
+                                href="https://shinerewards.io"
+                            >
+                                Launch App
+                            </Button>
+                            {/* <Button
                                 variant="contained"
                                 color="primary"
                                 href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%202.2.0.pdf"
                             >
                                 View Whitepaper
+                            </Button> */}
+                            <Button
+                                color="primary"
+                                variant="contained"
+                                href="/buy"
+                            >
+                                Buy Shine
                             </Button>
                         </Grid>
                     </TitleBar>
@@ -286,17 +297,24 @@ const Home: NextPage = () => {
                                     <Button
                                         variant="contained"
                                         color="secondary"
+                                        href="https://shinerewards.io"
+                                    >
+                                        Launch App
+                                    </Button>
+                                    <Button
+                                        variant="contained"
+                                        color="secondary"
                                         href="/buy"
                                     >
                                         Buy Shine
                                     </Button>
-                                    <Button
+                                    {/* <Button
                                         variant="contained"
                                         color="secondary"
                                         href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%202.2.0.pdf"
                                     >
                                         View Whitepaper
-                                    </Button>
+                                    </Button> */}
                                 </Grid>
                             </Grid>
                         </Container>
@@ -729,15 +747,21 @@ const Home: NextPage = () => {
                                 xs={12}
                                 justifyContent="space-around"
                             >
+                                <Button
+                                    variant="contained"
+                                    href="https://shinerewards.io"
+                                >
+                                    Launch App
+                                </Button>
                                 <Button variant="contained" href="/buy">
                                     Buy Shine
                                 </Button>
-                                <Button
+                                {/* <Button
                                     variant="contained"
                                     href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%202.2.0.pdf"
                                 >
                                     View Whitepaper
-                                </Button>
+                                </Button> */}
                             </Grid>
                         </Grid>
                     </Container>
