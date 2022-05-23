@@ -44,6 +44,10 @@ const Transparency = () => {
                                     0x3464DE7caf9f384aa5f41e69E151b707903b409F
                                 </Typography>
                                 <Typography variant="body1" sx={classes.body}>
+                                    Staking Contract:
+                                    0x1653B9aa9c9ce3aE976720b7B449bcEb281E1BFc
+                                </Typography>
+                                <Typography variant="body1" sx={classes.body}>
                                     Auto-liquidity address (internal code use):
                                     0x5420B45d9A0aeC7dd06ca8a828A54d9B1c6f449d
                                 </Typography>
