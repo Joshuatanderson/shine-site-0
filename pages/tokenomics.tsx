@@ -43,13 +43,13 @@ const allocationChartData = {
 };
 
 const feeBreakdownChartData = {
-    labels: ["Redistribution", "Charity", "Liquidity", "Marketing"],
+    labels: ["Redistribution", "Liquidity", "Marketing"],
     datasets: [
         {
             label: "Token Distribution",
-            data: [1, 1, 1, 1],
-            backgroundColor: [yellow, seafoam, coral, dark],
-            borderColor: [yellow, seafoam, coral, dark],
+            data: [1, 1, 1],
+            backgroundColor: [yellow, seafoam, dark],
+            borderColor: [yellow, seafoam, dark],
             borderWidth: 1,
         },
     ],
