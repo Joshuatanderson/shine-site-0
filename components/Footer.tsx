@@ -56,7 +56,7 @@ const Footer = () => {
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant="body1">
-                                        <Link href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white paper 2.2.0.pdf">
+                                        <Link href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%203.1.0.pdf">
                                             Whitepaper
                                         </Link>
                                     </Typography>
