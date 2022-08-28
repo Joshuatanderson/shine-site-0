@@ -43,13 +43,13 @@ const allocationChartData = {
 };
 
 const feeBreakdownChartData = {
-    labels: ["Redistribution", "Liquidity", "Marketing"],
+    labels: ["Redistribution", "Burn", "Liquidity", "Marketing"],
     datasets: [
         {
             label: "Token Distribution",
-            data: [1, 1, 1],
-            backgroundColor: [yellow, seafoam, dark],
-            borderColor: [yellow, seafoam, dark],
+            data: [1, 1, 1, 1],
+            backgroundColor: [yellow, seafoam, coral, dark],
+            borderColor: [yellow, seafoam, coral, dark],
             borderWidth: 1,
         },
     ],
@@ -176,7 +176,8 @@ const Tokenomics = () => {
                                     transaction fee. This supports
                                     ShineMine&apos;s vision of carbon neutrality
                                     and sustained growth, as well as rewarding
-                                    SHINE token holders.
+                                    SHINE token holders via token burns and
+                                    redistribution.
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} sm={6}>
