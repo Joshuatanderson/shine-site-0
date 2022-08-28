@@ -103,7 +103,7 @@ const Whitepaper = () => {
                                 <Button
                                     variant="contained"
                                     color="secondary"
-                                    href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white paper 2.2.0.pdf"
+                                    href="https://storageapi.fleek.co/joshuatanderson-team-bucket/white%20paper%203.1.0.pdf"
                                     target="_blank"
                                 >
                                     View Whitepaper
