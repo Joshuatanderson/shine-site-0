@@ -14,11 +14,9 @@ import { darkTheme, lightTheme } from "../styles/theme";
 import adam from "../public/team/adam.jpg";
 import maria from "../public/team/maria.jpg";
 import noah from "../public/team/noah.jpg";
-import joshua from "../public/team/joshua.jpg";
 import conner from "../public/team/conner.jpg";
 import matthew from "../public/team/matthew.jpg";
 import stephen from "../public/team/stephen.jpg";
-import tahe from "../public/team/tahe.jpg";
 import TitleBar from "../components/TitleBar";
 
 import { FaLinkedin } from "react-icons/fa";
@@ -40,21 +38,6 @@ const team = [
         details:
             "Adam entered the crypto space in 2015, leading an online think tank on blockchain and its emerging applications. His cross-industry business experience  and desire to innovate drives ShineMine’s mission of creating a new, better way to mine cryptocurrency.",
         linkedIn: "https://www.linkedin.com/in/adamenamorado/",
-    },
-    {
-        name: "Joshua Anderson",
-        file: joshua,
-        description: "Tech Lead",
-        details:
-            "Joshua is an LSU MBA graduate who steered his career as a software engineer towards blockchain development after falling in love with the tech behind it. He also serves as co-director for Startup Grind Baton Rouge, in partnership with Google for Startups.",
-        linkedIn: "https://www.linkedin.com/in/joshua-anderson-mba-2aab9b89/",
-    },
-    {
-        name: "Tahe Governor",
-        file: tahe,
-        description: "Marketing Lead",
-        details:
-            "Tahe has a passion and expertise in all things related to communication. His freelance business, Maverick Copy, offers services to businesses in a variety of fields who have a desire to standout and be heard clearly by their audience. He's eager to make ShineMine a leading voice in cryptocurrency mining.",
     },
     {
         name: "Maria Goddard",
